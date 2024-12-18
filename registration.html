@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Registration - Football Nations League</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Team Registration</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="fixtures.html">Fixtures</a>
+        <a href="rules.html">Rules</a>
+    </nav>
+    <main>
+        <form action="/submit_registration" method="POST">
+            <label for="team-name">Team Name:</label>
+            <input type="text" id="team-name" name="team-name" required>
+            <br>
+            <label for="manager-name">Manager's Name:</label>
+            <input type="text" id="manager-name" name="manager-name" required>
+            <br>
+            <label for="contact">Contact Information:</label>
+            <input type="text" id="contact" name="contact" required>
+            <br>
+            <label for="players">Player Names (comma-separated):</label>
+            <textarea id="players" name="players" rows="5" required></textarea>
+            <br>
+            <button type="submit">Register Team</button>
+        </form>
+    </main>
+</body>
+</html>
