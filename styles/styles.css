@@ -26,7 +26,8 @@ main {
     margin: auto;
 }
 
-main p, main ul {
+main p,
+main ul {
     margin-bottom: 20px;
 }
 
