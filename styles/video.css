@@ -32,6 +32,8 @@
 
 /* Optional: Add a container around the video to control layout better */
 .video-container {
+    position: relative;
+    z-index: 1;
     width: 100%;
     max-width: 1200px;
     /* Sets a max width for larger screens */

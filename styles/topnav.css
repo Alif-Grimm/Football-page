@@ -1,5 +1,7 @@
 /* Base Navigation Styling */
 nav {
+    position: relative;
+    z-index: 20;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +30,8 @@ nav a:active {
 
 /* Burger Menu Styling */
 .burger {
+    position: relative;
+    z-index: 20;
     display: none;
     flex-direction: column;
     cursor: pointer;
