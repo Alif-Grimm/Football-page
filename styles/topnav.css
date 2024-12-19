@@ -1,8 +1,11 @@
+/* Base Navigation Styling */
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #333;
     padding: 1rem;
+    position: relative;
 }
 
 nav a {
@@ -23,13 +26,87 @@ nav a:active {
     background-color: #444;
 }
 
-@media (max-width: 600px) {
+/* Burger Menu Styling */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.3rem;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    /* Center links on larger screens */
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+/* Mobile-specific Styling */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
     nav {
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
+        /* Adjust layout for burger menu */
     }
 
-    nav a {
-        margin: 0.5rem 0;
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        /* Only display links when the burger menu is active */
+    }
+}
+
+@media (min-width: 769px) {
+    nav {
+        justify-content: center;
+        /* Restore centered layout on larger screens */
+    }
+
+    .burger {
+        display: none;
+        /* Hide burger menu */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    }
+
+    .nav-links a {
+        margin: 0 1rem;
     }
 }

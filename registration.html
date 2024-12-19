@@ -7,6 +7,7 @@
     <title>Team Registration - Football Nations League</title>
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/styles/topnav.css">
+    <link rel="stylesheet" href="/styles/contact_form.css">
 </head>
 
 <body>
@@ -15,12 +16,20 @@
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="info.html">Information</a>
-        <a href="fixtures.html">Fixtures</a>
-        <a href="rules.html">Rules</a>
-        <a href="registration.html">Team Registration</a>
+        <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">Information</a></li>
+            <li><a href="fixtures.html">Fixtures</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="registration.html">Team Registration</a></li>
+        </ul>
     </nav>
+
 
     <main>
         <form action="/submit_registration" method="POST">
@@ -40,5 +49,7 @@
         </form>
     </main>
 </body>
+
+<script src="scripts/mobile_top_nav.js"></script>
 
 </html>
