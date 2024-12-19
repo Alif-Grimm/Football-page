@@ -1,72 +1,48 @@
-/* Set box-sizing globally to border-box */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-    /* Ensures padding and borders are included in the total width and height */
 }
 
-/* Style for the video element */
+
 .styled-video {
     width: 100%;
-    /* Makes the video scale with the width of the screen */
+
     max-width: 100%;
-    /* Ensures the video never exceeds the width */
     height: auto;
-    /* Maintains aspect ratio of the video */
     max-height: 100vh;
-    /* Ensures the video height does not exceed the viewport height */
     border-radius: 15px;
-    /* Rounded corners for a modern look */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Adds a subtle shadow around the video */
     display: block;
-    /* Removes any unwanted space below the video */
     margin: 0 auto;
-    /* Centers the video horizontally */
     padding: 0;
-    /* Ensures no extra padding around the video */
     object-fit: contain;
-    /* Ensures the video is scaled without cropping */
 }
 
-/* Optional: Add a container around the video to control layout better */
 .video-container {
     position: relative;
     z-index: 1;
     width: 100%;
     max-width: 1200px;
-    /* Sets a max width for larger screens */
     margin: 0 auto;
-    /* Centers the container */
     padding: 20px;
-    /* Adds some space around the video */
     background-color: #000;
-    /* Adds a dark background behind the video */
     border-radius: 20px;
-    /* Optional: Adds rounded corners around the container */
     overflow: hidden;
-    /* Ensures the rounded corners apply to the video as well */
 }
 
-/* Optional: Styling for the video when it's placed in a fullscreen section */
 .fullscreen-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    /* Make the video take up the entire screen */
     object-fit: contain;
-    /* Ensures the video fits inside the screen without cropping */
     z-index: -1;
-    /* Places the video behind other content */
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .styled-video {
         border-radius: 10px;
-        /* Smaller border radius on mobile for a more compact look */
     }
 }
